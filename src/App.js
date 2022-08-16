@@ -3,8 +3,10 @@ import './App.css';
 
 function App() {
 
+  // the search button add to the urk endPoint
   const [endPoint, setEndPoint] = useState('')
 
+  // has to do with the api structure 'data.d'
   const [container, setContainer] = useState([])
 
   const [finalPoint, setFinalPoint] = useState("")
@@ -31,7 +33,6 @@ function App() {
     .then(data => {
       setContainer(data.d)
     })
-    // .then(response => console.log(response))
     .catch(err => console.error(err));
   }
 
